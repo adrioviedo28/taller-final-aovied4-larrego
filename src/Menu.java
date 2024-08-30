@@ -16,7 +16,9 @@ public class Menu {
 
 
     public static void main(String[] args) {
+        int opciones = -1;
         Scanner ingreseOpcion = new Scanner(System.in);
+        Scanner scannerMenuPrincipal = new Scanner(System.in);
 
         do {
             System.out.println("-----------------------------------------------------");
@@ -37,7 +39,7 @@ public class Menu {
             System.out.println("-----------------------------------------------------");
 
             System.out.println("Selecciona una opción para explicarte uwu");
-            int opciones = ingreseOpcion.nextInt();
+             opciones = ingreseOpcion.nextInt();
 
             switch (opciones) {
                 case 1:
@@ -73,9 +75,9 @@ public class Menu {
                         System.out.println("|      el rango es -128 a 127                        |");
                         System.out.println("-----------------------------------------------------");
                         System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
                         break;
-
-
                     }
 
                 case 2:
@@ -119,7 +121,7 @@ public class Menu {
 
 
             }
-        }while (ingreseOpcion.nextInt()== 0);
+        }while (opciones != 0);
         System.out.println("Saliendo del sistema...");
 
     }
