@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import java.util.Scanner;
 public class Menu {
 /*
@@ -128,4 +127,4 @@ public class Menu {
 
     }
 }
->>>>>>> 59db5919009e643510a6c945a2aaa44e1a274015
+
