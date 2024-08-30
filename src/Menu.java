@@ -16,7 +16,7 @@ public class Menu {
 
 
     public static void main(String[] args) {
-        int opciones = -1;
+        int opciones;
         Scanner ingreseOpcion = new Scanner(System.in);
         Scanner scannerMenuPrincipal = new Scanner(System.in);
 
@@ -81,8 +81,59 @@ public class Menu {
                     }
 
                 case 2:
-                    System.out.println("Imprime el menu String");
-                    break;
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("                       STRING                        ");
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("|      1. ¿Que es un String?                         |");
+                    System.out.println("|      2. ¿Que es Short?                             |");
+                    System.out.println("|      3. ¿Que es int?                               |");
+                    System.out.println("|      4. ¿Que es long?                              |");
+                    System.out.println("|      5. ¿Que es Float?                             |");
+                    System.out.println("|      6. ¿Que es Double                             |");
+                    System.out.println("|      7. ¿Que es Char?                              |");
+                    System.out.println("|      8. ¿Que es Boolean?                           |");
+                    System.out.println("|      0. Salir                                      |");
+                    System.out.println("-----------------------------------------------------");
+
+                    System.out.println("Selecciona una opcion");
+                    Scanner OpcionString = new Scanner(System.in);
+                    int string = OpcionString.nextInt();
+
+                    if (string == 1) {
+                        System.out.println("-----------------------------------------------------");
+                        System.out.println("                 ¿Que es un String?                  ");
+                        System.out.println("-----------------------------------------------------");
+                        System.out.println("|      Explicacion                                   |");
+                        System.out.println("|                                                    |");
+                        System.out.println("|                                                    |");
+                        System.out.println("|                                                    |");
+                        System.out.println("|                                                    |");
+                        System.out.println("|      Ejemplo:                                      |");
+                        System.out.println("|      Cual es el rango?:                            |");
+                        System.out.println("|      el rango es -128 a 127                        |");
+                        System.out.println("-----------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+
+                    }else if (string == 2) {
+                            System.out.println("-----------------------------------------------------");
+                            System.out.println("              ejemplo de un string (prueba)          ");
+                            System.out.println("-----------------------------------------------------");
+                            System.out.println("|      Explicacion                                   |");
+                            System.out.println("|                                                    |");
+                            System.out.println("|                                                    |");
+                            System.out.println("|                                                    |");
+                            System.out.println("|                                                    |");
+                            System.out.println("|      Ejemplo:                                      |");
+                            System.out.println("|      Cual es el rango?:                            |");
+                            System.out.println("|      el rango es -128 a 127                        |");
+                            System.out.println("-----------------------------------------------------");
+                            System.out.println("Presiona Enter para continuar...");
+                            scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                            scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+                        }
 
                 case 3:
                     System.out.println("Imprime el menu Constantes");
