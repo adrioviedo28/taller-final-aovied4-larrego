@@ -98,7 +98,96 @@ public class Menu {
                     break;
 
                 case 6:
-                    System.out.println("Imprime el menu Condicional Switch");
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("                       SWITCH                        ");
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("|      Elige la opcion que deseas ver               |");
+                    System.out.println("|      1. Explicación de Switch                     |");
+                    System.out.println("|      2.Programa de Switch -valide su calificación |");
+                    System.out.println("-----------------------------------------------------");
+
+                    System.out.println("Selecciona una opcion");
+                    Scanner Sswitch = new Scanner(System.in);
+                    int opcionSwitch = Sswitch.nextInt();
+
+                    if (opcionSwitch == 1) {
+                        System.out.println("-----------------------------------------------------");
+                        System.out.println("                 Explicación de Switch               ");
+                        System.out.println("-----------------------------------------------------");
+                        System.out.println("| Es una estructura de control que te permite       |");
+                        System.out.println("| ejecutar diferentes bloques de código basados     |");
+                        System.out.println("| en el valor de una expresión. Es útil cuando      |");
+                        System.out.println("| tienes varias opciones posibles para una variable |");
+                        System.out.println("|y quieres decidir qué hacer en función de ese valor|");
+                        System.out.println("|      Ejemplo:                                     |");
+                        System.out.println("|      int dia = 3;                                 |");
+                        System.out.println("|       switch (dia) {                              |");
+                        System.out.println("|          case 1:                                  |");
+                        System.out.println("|            System.out.println(\"Lunes\");           |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          case 2:                                  |");
+                        System.out.println("|            System.out.println(\"Martes\");          |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          case 3:                                  |");
+                        System.out.println("|            System.out.println(\"Miércoles\");       |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          case 4:                                  |");
+                        System.out.println("|            System.out.println(\"Jueves\");          |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          case 5:                                  |");
+                        System.out.println("|            System.out.println(\"Viernes\");         |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          case 6:                                  |");
+                        System.out.println("|            System.out.println( \"Sábado\");          |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          case 7:                                  |");
+                        System.out.println("|            System.out.println(\"Domingo\");         |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          default:                                 |");
+                        System.out.println("|            System.out.println(\"Día inválido\");    |");
+                        System.out.println("|            break;                                 |");
+                        System.out.println("|          }                                        |");
+                        System.out.println("-----------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+
+                        break;
+                    } else if (opcionSwitch == 2) {
+                        Scanner IngreseCalificacion = new Scanner(System.in);
+                        System.out.println("Digite su Calificacion");
+                        int calificacion = IngreseCalificacion.nextInt();
+
+                        switch (calificacion){
+                            case 1, 2:{
+                                System.out.println("Su calificación es: F");
+                                break;
+                            }
+                            case 3, 4:{
+                                System.out.println("Su calificación es: D");
+                                break;
+                            }
+                            case 6, 5:{
+                                System.out.println("Su calificación es: C");
+                                break;
+                            }
+                            case 8, 7:{
+                                System.out.println("Su calificación es: B");
+                                break;
+                            }
+                            case 10, 9:{
+                                System.out.println("Su calificación es: A");
+                                break;
+                            }
+                            default:{
+                                System.out.println("Número no válido, por favor verifique");
+                            }
+                        }
+
+                    }
+                    System.out.println("Presiona Enter para continuar...");
+                    scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                    scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
                     break;
 
                 case 7:
