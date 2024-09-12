@@ -223,12 +223,140 @@ public class Menu {
                     break;
 
                 case 3:
-                    System.out.println("Imprime el menu Constantes");
+                    System.out.println("---------------------------------------------------------------------------------");
+                    System.out.println("                 ¿Que es una Constante?                                          ");
+                    System.out.println("---------------------------------------------------------------------------------");
+                    System.out.println("| Son valores que no cambian durante la ejecución del programa. Se definen      |");
+                    System.out.println("| usando la palabra clave final, lo que significa que una vez que se les asigna |");
+                    System.out.println("| un valor, no se puede modificar.                                              |");
+                    System.out.println("| Sintaxis:                                                                     |");
+                    System.out.println("| public static final int MAX_USUARIOS = 100;                                   |");
+                    System.out.println("| Se suelen escribir en Mayusculas y se separan las palaras con un guion bajo _ |");
+                    System.out.println("---------------------------------------------------------------------------------");
+                    System.out.println("Presiona Enter para continuar...");
+                    scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                    scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
                     break;
 
                 case 4:
-                    System.out.println("Imprime el menu Tipo de operadores");
-                    break;
+                    System.out.println("-----------------------------------------------------------------------------------");
+                    System.out.println("               ¿Que son los Operadores y cuales son sus tipos?                     ");
+                    System.out.println("-----------------------------------------------------------------------------------");
+                    System.out.println("| los operadores son símbolos que realizan operaciones sobre valores y variables. |");
+                    System.out.println("| los tipos de operadores mas comunes son:                                        |");
+                    System.out.println("| 1. Operadores Aritmeticos                                                       |");
+                    System.out.println("| 2. Operadores Relacionales                                                      |");
+                    System.out.println("| 3. Operadores Logicos                                                           |");
+                    System.out.println("| 4. Operadores Unarios                                                           |");
+                    System.out.println("| 5. Operadores De Asignacion                                                     |");
+                    System.out.println("| 6. Operadores Ternarios                                                         |");
+                    System.out.println("-----------------------------------------------------------------------------------");
+                    System.out.println("Selecciona una opcion para obtener una descripcion detallada:)");
+
+                    Scanner OpcionOperadores = new Scanner(System.in);
+                    int tipoOperadores = OpcionOperadores.nextInt();
+
+                    if (tipoOperadores == 1) {
+                        System.out.println("---------------------------------------------------------------------------------");
+                        System.out.println("                 ¿Que son los Oeradores Aritmeticos?                            ");
+                        System.out.println("---------------------------------------------------------------------------------");
+                        System.out.println("| Estos operadores se usan para realizar cálculos matemáticos.                   |");
+                        System.out.println("| Suma (+): int a = 5 + 3; // a es 8                                             |");
+                        System.out.println("| Resta (-): int b = 10 - 4; // b es 6                                           |");
+                        System.out.println("| Multiplicacion (*): int c = 7 * 2; // c es 14                                  |");
+                        System.out.println("| Division (/): int d = 20 / 4; // d es 5                                        |");
+                        System.out.println("| Modulo int e = 10 % 3; // e es 1                                               |");
+                        System.out.println("| el modulo devuelve el residuo de la division                                   |");
+                        System.out.println("----------------------------------------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+
+                    } else if (tipoOperadores == 2) {
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("                      ¿Que son los Operadores Relacionales?                          ");
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("| Estos operadores comparan dos valores y devuelven un valor booleano (true o false)|");
+                        System.out.println("| Igual a (==): boolean resultado = (5 == 5); // resultado es true                  |");
+                        System.out.println("| Diferente de (!=): boolean resultado = (5 != 3); // resultado es true             |");
+                        System.out.println("| Mayor que (>): boolean resultado = (7 > 4); // resultado es true                  |");
+                        System.out.println("| Menor que (<): boolean resultado = (3 < 6); // resultado es true                  |");
+                        System.out.println("| Mayor o igual que (>=): boolean resultado = (5 >= 5); // resultado es true        |");
+                        System.out.println("| Menor o igual que (<=): boolean resultado = (4 <= 7); // resultado es true        |");
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+
+                    } else if (tipoOperadores == 3) {
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("                      ¿Que son los Operadores Logicos?                               ");
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("| Estos operadores se usan para combinar condiciones booleanas.                     |");
+                        System.out.println("| Y logico (&&): Devuelve true si ambas condiciones son verdaderas.                 |");
+                        System.out.println("| » boolean resultado = (5 > 3 && 8 > 6); // resultado es true                      |");
+                        System.out.println("| O logico (||): Devuelve true si al menos una de las condiciones es verdadera      |");
+                        System.out.println("| » boolean resultado = (5 > 3 || 8 < 6); // resultado es true                      |");
+                        System.out.println("| No logico (!): Devuelve el valor opuesto de la condicion                          |");
+                        System.out.println("| » boolean resultado = !(5 > 3); // resultado es false                             |");
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+
+                    } else if (tipoOperadores == 4) {
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("                      ¿Que son los Operadores Unarios?                               ");
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("| Estos operadores actúan sobre un solo valor.                                      |");
+                        System.out.println("| Incremento (++): Aumenta el valor de uno en uno                                   |");
+                        System.out.println("| » int a = 5; a++; // a es 6                                                       |");
+                        System.out.println("| Decremento(--): Disminuye el valor de uno en uno                                  |");
+                        System.out.println("| » int b = 5; b--; // b es 4                                                       |");
+                        System.out.println("| Negacion (-): Cambia el signo de un valor                                         |");
+                        System.out.println("| » int c = 5; int d = -c; // d es -5                                               |");
+                        System.out.println("-------------------------------------------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+
+                    } else if (tipoOperadores == 5) {
+                        System.out.println("--------------------------------------------------------------------------------------");
+                        System.out.println("                      ¿Que son los Operadores de Asignacion?                          ");
+                        System.out.println("--------------------------------------------------------------------------------------");
+                        System.out.println("| Estos operadores asignan valores a variables.                                      |");
+                        System.out.println("| Asignacion Simple (=): Asigna valor a una variable                                 |");
+                        System.out.println("| » int x = 10; // x es 10                                                           |");
+                        System.out.println("| Asignacion suma (+=): Suma y asigna el resultado                                   |");
+                        System.out.println("| » int y = 5; y += 3; // y es 8                                                     |");
+                        System.out.println("| Asignacion Resta (-=): Resta y asigna el resultado                                 |");
+                        System.out.println("| » int z = 10; z -= 4; // z es 6                                                    |");
+                        System.out.println("| y asi con todas las operaciones matematicas basicas                                |");
+                        System.out.println("---------------------------------- ---------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+
+                    } else if (tipoOperadores == 6) {
+                        System.out.println("--------------------------------------------------------------------------------------");
+                        System.out.println("                      ¿Que son los Operadores de Ternarios?                           ");
+                        System.out.println("--------------------------------------------------------------------------------------");
+                        System.out.println("| Es una forma compacta de realizar una operación condicional.                       |");
+                        System.out.println("| Operador Ternario (?): Elige una opcion basado en una condicion                    |");
+                        System.out.println("| » int edad = 18;                                                                   |");
+                        System.out.println("| String resultado = (edad >= 18) ? Adulto : Menor                                   |");
+                        System.out.println("| // resultado es Adulto                                                             |");
+                        System.out.println("---------------------------------- ---------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+                    }
 
                 case 5:
                     System.out.println("Imprime el menu Condicional IF, ELSE IF, ELSE");
