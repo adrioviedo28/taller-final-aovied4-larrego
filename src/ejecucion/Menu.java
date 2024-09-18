@@ -1,5 +1,11 @@
 package ejecucion;
 
+import explicaciones.Detalle;
+import menus.MenuPrincipal;
+import menus.SubMenus;
+//import utilidades.Validaciones;
+
+
 import java.util.Random;
 import java.util.Scanner;
 public class Menu {
@@ -19,10 +25,13 @@ public class Menu {
 
 
     public static void main(String[] args) {
-        int menu;
+        //int menu;
         int opciones;
-        Scanner ingreseOpcion = new Scanner(System.in);
         Scanner scannerMenuPrincipal = new Scanner(System.in);
+        //Scanner scannerMenuPrimitivos = new Scanner(System.in);
+        Scanner opcionPrimitivos = new Scanner(System.in);
+        Scanner ingreseOpcion = new Scanner(System.in);
+
 
         do {
             System.out.println("-----------------------------------------------------");
@@ -43,61 +52,21 @@ public class Menu {
             System.out.println("-----------------------------------------------------");
 
             System.out.println("Selecciona una opción para explicarte uwu");
+            MenuPrincipal.menuPrincipal();
             opciones = ingreseOpcion.nextInt();
 
             switch (opciones) {
                 case 1:
-                    Scanner scannerMenuPrimitivos = new Scanner(System.in);
-                    System.out.println("-----------------------------------------------------");
-                    System.out.println("              DATOS PRIMITIVOS                       ");
-                    System.out.println("-----------------------------------------------------");
-                    System.out.println("|      1. ¿Que es un Byte?                           |");
-                    System.out.println("|      2. ¿Que es Short?                             |");
-                    System.out.println("|      3. ¿Que es int?                               |");
-                    System.out.println("|      4. ¿Que es long?                              |");
-                    System.out.println("|      5. ¿Que es Float?                             |");
-                    System.out.println("|      6. ¿Que es Double                             |");
-                    System.out.println("|      7. ¿Que es Char?                              |");
-                    System.out.println("|      8. ¿Que es Boolean?                           |");
-                    System.out.println("|      0. Salir                                      |");
-                    System.out.println("-----------------------------------------------------");
-                    System.out.println("Selecciona una opcion");
-
-                    Scanner OpcionPrimitivos = new Scanner(System.in);
-                    int primitivos = OpcionPrimitivos.nextInt();
+                    SubMenus.datosPrimitivos();
+                    int primitivos = opcionPrimitivos.nextInt();
 
                     if (primitivos == 1) {
-                        System.out.println("--------------------------------------------------------------");
-                        System.out.println("                 ¿Que es un Byte?                             ");
-                        System.out.println("--------------------------------------------------------------");
-                        System.out.println("| Es uno de los tipos de datos numéricos más básicos         |");
-                        System.out.println("| y se utiliza para almacenar valores enteros pequeños.      |");
-                        System.out.println("| Se utiliza generalmente cuando se necesita ahorrar memoria |");
-                        System.out.println("| en aplicaciones que manejan grandes cantidades de datos    |");
-                        System.out.println("| numéricos pequeños. Va del 0 al 127                        |");
-                        System.out.println("| Sintaxis:                                                  |");
-                        System.out.println("|   byte valorPositivo = 127; // Valor máximo positivo       |");
-                        System.out.println("|   byte valorNegativo = -128; // Valor mínimo negativo      |");
-                        System.out.println("--------------------------------------------------------------");
-                        System.out.println("Presiona Enter para continuar...");
+                        Detalle.byteexplicacion();
                         scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
                         scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
                         break;
                     } else if (primitivos == 2) {
-                        System.out.println("------------------------------------------------------------------");
-                        System.out.println("                 ¿Que es un Short?                                ");
-                        System.out.println("------------------------------------------------------------------");
-                        System.out.println("| Se utiliza para representar números enteros. Es uno de los     |");
-                        System.out.println("| tipos de datos más compactos en términos de almacenamiento,    |");
-                        System.out.println("| y se usa cuando se necesita una mayor eficiencia en la memoria |");
-                        System.out.println("| para representar números enteros. Puede almacenar valores      |");
-                        System.out.println("| enteros en el rango de -32,768 a 32,767.                       |");
-                        System.out.println("| Sintaxis:                                                      |");
-                        System.out.println("|   short numero = 15000; // Valor dentro del rango permitido    |");
-                        System.out.println("|   short otroNumero = 40000; // Valor fuera del rango que       |");
-                        System.out.println("|   generara error de compilacion                                |");
-                        System.out.println("------------------------------------------------------------------");
-                        System.out.println("Presiona Enter para continuar...");
+                       Detalle.shortExplicacion();
                         scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
                         scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
                         break;
@@ -361,7 +330,33 @@ public class Menu {
                     }
 
                 case 5:
-                    System.out.println("Imprime el menu Condicional IF, ELSE IF, ELSE");
+                    System.out.println("-------------------------------------------------------------------------------------");
+                    System.out.println("               ¿En que consisten los Condicionales IF, ELSE IF, ELSE?                ");
+                    System.out.println("-------------------------------------------------------------------------------------");
+                    System.out.println("| Permiten ejecutar diferentes bloques de código si ciertas condiciones son         |");
+                    System.out.println("| verdaderas o falsas. Aqui te explicamos en que consiste cada uno y su sintaxis    |");
+                    System.out.println("| If: Esta declaración evalúa una condición. Si la condición es verdadera, se       |");
+                    System.out.println("| ejecuta el bloque de codigo asociado. Sintaxis: if (condicion)                    |");
+                    System.out.println("| » int x = 10; if (x > 5) { System.out.println( x es mayor que 5 ); }              |");
+                    System.out.println("| Else if: Se usa después de una declaración if para evaluar una condicion          |");
+                    System.out.println("| alternativa si la condicion de IF no es verdadera. Pueden haber multiples else if |");
+                    System.out.println("| Sintaxis: if (condicion1){ se ejecuta si la condicion es verdadera}               |");
+                    System.out.println("| else if(condicion2){ se ejecuta si la condicion es verdadera}                     |");
+                    System.out.println("| » int x = 10; if (x > 15) { System.out.println( x es mayor que 15 ); }            |");
+                    System.out.println("| else if (x > 5) {System.out.println( x es mayor que 5 pero menor o igual a 15 );} |");
+                    System.out.println("| Else:  Se utiliza al final de una serie de condicionales para manejar el caso en  |");
+                    System.out.println("| que ninguna de las condiciones anteriores (if o else if) sea verdadera.           |");
+                    System.out.println("| Es opcional y captura todos los casos restantes. Sintaxis: if (condición1) {}     |");
+                    System.out.println("| else if (condición2){} else {se ejecuta si ninguna de las anteriores es verdadera}|");
+                    System.out.println("| »int x = 3; if (x > 5) {System.out.println( x es mayor que 5 );}                  |");
+                    System.out.println("| else if (x == 5) {System.out.println( x es igual a 5 );}                          |");
+                    System.out.println("| else {System.out.println( x es menor que 5 );}                                    |");
+                    System.out.println("-------------------------------------------------------------------------------------");
+                    System.out.println("Selecciona una opcion para interactuar con un mini programa para cada condicional)");
+                    System.out.println("| 1. Programa If      |");
+                    System.out.println("| 2. Programa Else if |");
+                    System.out.println("| 3. Programa Else    |");
+
                     break;
 
                 case 6:
@@ -623,17 +618,14 @@ public class Menu {
 
                             // Verificar si el número ingresado es correcto
                             if (numeroUsuario < numeroSecreto) {
-                                System.out.println("Demasiado bajo. Inténtalo de nuevo.");
+                                System.out.println("Demasiado bajo. Inténtalo nuevamente.");
                             } else if (numeroUsuario > numeroSecreto) {
-                                System.out.println("Demasiado alto. Inténtalo de nuevo.");
+                                System.out.println("Demasiado alto. Inténtalo nuevamente.");
                             } else {
                                 System.out.println("¡Felicidades! Has adivinado el número.");
                                 adivinado = true; // Salir del bucle
                             }
                         } while (!adivinado); // Continuar hasta que el número sea adivinado
-
-                        //Se cierra el Scanner después de que se termina el bucle
-                        scanner.close();
 
                         System.out.println("Presiona Enter para continuar...");
                         scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
@@ -643,21 +635,131 @@ public class Menu {
 
 
                 case 9:
-                    System.out.println("Imprime el menu Bucle WHILE");
-                    break;
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("                     Bucle WHILE                     ");
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("|     Elige la opcion que deseas ver                |");
+                    System.out.println("|     1.Explicación  WHILE                          |");
+                    System.out.println("|     2.Programa de  WHILE                          |");
+                    System.out.println("|                Digite una opción                  |");
+                    System.out.println("-----------------------------------------------------");
+
+                    System.out.println("Selecciona una opcion");
+                    Scanner While = new Scanner(System.in);
+                    int opcionWhile = While.nextInt();
+
+                    if (opcionWhile == 1) {
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                             Explicación WHILE                               ");
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("| un while es una estructura de control de flujo que te permite             |");
+                        System.out.println("| ejecutar un bloque de código repetidamente mientras se cumpla una         |");
+                        System.out.println("| condición específica.                                                     |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| a.Condición: Antes de ejecutar el código dentro del bucle, se evalúa      |");
+                        System.out.println("| una condición. Esta condición debe ser una expresión que resulte en true  |");
+                        System.out.println("| o false.                                                                  |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| b.Ejecución del Código: Si la condición es true, el código dentro del     |");
+                        System.out.println("| bucle while se ejecuta.                                                   |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| c.Reevaluación: Después de ejecutar el código, la condición se evalúa     |");
+                        System.out.println("| de nuevo. Si sigue siendo true, el código se ejecuta nuevamente.          |");
+                        System.out.println("| Este proceso se repite hasta que la condición sea false.                  |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| d.Terminación: Cuando la condición se vuelve false, el bucle termina y el |");
+                        System.out.println("| programa continúa con el código que sigue después del bucle.              |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| la condición.Si la condición es verdadera (true),el bucle se repite       |");
+                        System.out.println("| Si es falsa (false), el bucle termina.                                    |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| Ejemplo:                                                                  |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| public class EjemploWhile {                                               |");
+                        System.out.println("|     public static void main(String[] args) {                              |");
+                        System.out.println("|          int contador = 0;                                                |");
+                        System.out.println("| // Bucle while que se ejecuta mientras contador sea menor que 5           |");
+                        System.out.println("|    while (contador < 5) {                                                 |");
+                        System.out.println("|        System.out.println(El contador es:  + contador);                 |");
+                        System.out.println("|         contador++; // Incrementa el contador                             |");
+                        System.out.println("|      }                                                                    |");
+                        System.out.println("|        System.out.println(El bucle ha terminado.);                      |");
+                        System.out.println("|     }                                                                     |");
+                        System.out.println("|   }                                                                       |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("|  a.Inicialización: Se define una variable contador y se inicializa en 0.  |");
+                        System.out.println("|  b.Condición del Bucle: while (contador < 5) verifica si el valor de      |");
+                        System.out.println("|    contador es menor que 5.                                               |");
+                        System.out.println("|  c.Ejecución del Código: Si la condición es true, se imprime el valor     |");
+                        System.out.println("|    del contador y luego se incrementa en 1.                               |");
+                        System.out.println("|  d.Reevaluación: Después de incrementar el contador, el bucle verifica    |");
+                        System.out.println("|    nuevamente la condición.Si el contador sigue siendo menor que 5,       |");
+                        System.out.println("|    el bucle se ejecuta otra vez.                                          |");
+                        System.out.println("|  e.Terminación: Cuando contador llega a 5, la condición contador < 5      |");
+                        System.out.println("|    se vuelve false, y el bucle termina. El programa continúa con la       |");
+                        System.out.println("|    línea que sigue después del bucle, que en este caso                    |");
+                        System.out.println("|    imprime El bucle ha terminado.                                         |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| El bucle while es útil cuando no sabes cuántas veces necesitarás ejecutar |");
+                        System.out.println("| el código, pero tienes una condición clara para determinar cuándo debe    |");
+                        System.out.println("| detenerse.                                                                |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+                    }
+
+                    else if (opcionWhile == 2) {
+                        Scanner numeroIngresado = new Scanner(System.in);
+                        System.out.println("Digite un número Entero");
+
+
+                        Scanner scanner = new Scanner(System.in);
+
+                        // Solicitar al usuario que ingrese un número
+                        System.out.print("Digite un numero para realizar la sumatoria ");
+                        int x = scanner.nextInt();
+
+                        // Verificar que el número ingresado sea positivo
+                        if (x < 1) {
+                            System.out.println("Por favor, ingresa un número entero positivo mayor o igual a 1.");
+                        } else {
+                            int suma = 0;
+                            int i = 1;
+
+                            // Bucle while para sumar los números del 1 al x
+                            while (i <= x) {
+                                suma += i; // Agregar el valor de i a la suma
+                                i++; // Incrementar i
+                            }
+
+                            // Mostrar el resultado
+                            System.out.println("La sumatoria de los números del 1 al " + x + " es: " + suma);
+                        }
+
+                    }
+
+
+            System.out.println("Presiona Enter para continuar...");
+            scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+            scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+            break;
+
 
                 case 10:
                     System.out.println("Imprime el menu Bucle FOR");
                     break;
-
-
             }
+
+
 
         }while (opciones != 0) ;
         System.out.println("Saliendo del sistema...");
     }
-
 }
+
 
 
 
