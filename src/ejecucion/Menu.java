@@ -1,4 +1,6 @@
+package ejecucion;
 
+import java.util.Random;
 import java.util.Scanner;
 public class Menu {
 /*
@@ -41,7 +43,7 @@ public class Menu {
             System.out.println("-----------------------------------------------------");
 
             System.out.println("Selecciona una opción para explicarte uwu");
-             opciones = ingreseOpcion.nextInt();
+            opciones = ingreseOpcion.nextInt();
 
             switch (opciones) {
                 case 1:
@@ -201,9 +203,9 @@ public class Menu {
                         scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
                         break;
 
-                    } else if (primitivos == 0){
-                    System.out.println("Saliendo del sistema...");
-                    System.out.println(" ");
+                    } else if (primitivos == 0) {
+                        System.out.println("Saliendo del sistema...");
+                        System.out.println(" ");
                     }
                     break;
                 case 2:
@@ -423,28 +425,28 @@ public class Menu {
                         System.out.println("Digite su Calificacion");
                         int calificacion = IngreseCalificacion.nextInt();
 
-                        switch (calificacion){
-                            case 1, 2:{
+                        switch (calificacion) {
+                            case 1, 2: {
                                 System.out.println("Su calificación es: F");
                                 break;
                             }
-                            case 3, 4:{
+                            case 3, 4: {
                                 System.out.println("Su calificación es: D");
                                 break;
                             }
-                            case 6, 5:{
+                            case 6, 5: {
                                 System.out.println("Su calificación es: C");
                                 break;
                             }
-                            case 8, 7:{
+                            case 8, 7: {
                                 System.out.println("Su calificación es: B");
                                 break;
                             }
-                            case 10, 9:{
+                            case 10, 9: {
                                 System.out.println("Su calificación es: A");
                                 break;
                             }
-                            default:{
+                            default: {
                                 System.out.println("Número no válido, por favor verifique");
                             }
                         }
@@ -457,7 +459,7 @@ public class Menu {
 
                 case 7:
                     System.out.println("-----------------------------------------------------");
-                    System.out.println("                       TERNARIA                        ");
+                    System.out.println("                       TERNARIA                      ");
                     System.out.println("-----------------------------------------------------");
                     System.out.println("|     Elige la opcion que deseas ver                |");
                     System.out.println("|     1. Explicación de Ternaria                    |");
@@ -536,8 +538,109 @@ public class Menu {
                     }
 
                 case 8:
-                    System.out.println("Imprime el menu Bucle DO WHILE");
-                    break;
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("                     Bucle DO WHILE                  ");
+                    System.out.println("-----------------------------------------------------");
+                    System.out.println("|     Elige la opcion que deseas ver                |");
+                    System.out.println("|     1.Explicación DO WHILE                        |");
+                    System.out.println("|     2.Programa de Do WHILE -Adivina el numero     |");
+                    System.out.println("|                Digite una opción                  |");
+                    System.out.println("-----------------------------------------------------");
+
+                    System.out.println("Selecciona una opcion");
+                    Scanner DoWhile = new Scanner(System.in);
+                    int opcionDoWhile = DoWhile.nextInt();
+
+                    if (opcionDoWhile == 1) {
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("                             Explicación DO WHILE                            ");
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.println("| Un bucle do-while es una estructura de control que te permite             |");
+                        System.out.println("| repetir un bloque de código varias veces.La principal diferencia          |");
+                        System.out.println("| con otros bucles,como el while, es que el bloque de código dentro         |");
+                        System.out.println("| del do-while siempre se ejecutará al menos una vez incluso si la condición|");
+                        System.out.println("| que controla el bucle es falsa desde el principio.                        |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| estructura básica del bucle do-while:                                     |");
+                        System.out.println("| do {                                                                      |");
+                        System.out.println("|   // Código que se ejecuta en cada iteración                              |");
+                        System.out.println("| } while (condición);                                                      |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| do: Esta palabra clave inicia el bucle.                                   |");
+                        System.out.println("|  El bloque de código dentro de las llaves {} se ejecutará al menos una vez|");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| Código dentro del do: Aquí pones las instrucciones que quieres repetir.   |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| while (condición);Después de ejecutar el bloque de código, se evalúa      |");
+                        System.out.println("| la condición.Si la condición es verdadera (true),el bucle se repite       |");
+                        System.out.println("| Si es falsa (false), el bucle termina.                                    |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| Ejemplo:                                                                  |");
+                        System.out.println("| int contador = 0;                                                         |");
+                        System.out.println("|                                                                           |");
+                        System.out.println("| do {                                                                      |");
+                        System.out.println("|     System.out.println(\"El contador es: \" + contador);                  |");
+                        System.out.println("|     contador++;                                                           |");
+                        System.out.println("|     }                                                                     |");
+                        System.out.println("|  } while (contador < 5);                                                  |");
+                        System.out.println("|  numero % 2 == 0 :Esta es la condición que verificamos. El operador % calcula  |");
+                        System.out.println("|  el residuo de la división del numero entre 2. Si el residuo es 0, entonces    |");
+                        System.out.println("|  el número es par.                                                             |");
+                        System.out.println("|                                                                                |");
+                        System.out.println("| \"El número es par\": Este es el valor asignado a resultado si la condición es |");
+                        System.out.println("| verdadera (es decir, si el número es par).                                     |");
+                        System.out.println("|                                                                                |");
+                        System.out.println("| \"El número es impar\": Este es el valor asignado a resultado si la condición  |");
+                        System.out.println("|  es falsa (es decir, si el número es impar).                                   |");
+                        System.out.println("|                                                                                |");
+                        System.out.println("| En el ejemplo, el número 7 es impar, por lo que el resultado será              |");
+                        System.out.println("| \"El número es impar\".                                                        |");
+                        System.out.println("----------------------------------------------------------------------------------");
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+                    } else if (opcionDoWhile == 2) {
+                        Scanner numeroIngresado = new Scanner(System.in);
+                        System.out.println("Digite un número Entero");
+
+
+                        Scanner scanner = new Scanner(System.in);
+                        Random random = new Random();
+
+                        // Generar un número aleatorio entre 1 y 10
+                        int numeroSecreto = random.nextInt(10) + 1;
+                        int numeroUsuario;
+                        boolean adivinado = false;
+
+                        // Bucle do-while para permitir que el usuario ingrse un numero e intente adivinar
+                        // hasta encontrar el correcto
+                        do {
+                            // Solicitar al usuario que ingrese un número
+                            System.out.print("Adivina el número (del 1 al 10): ");
+                            numeroUsuario = scanner.nextInt();
+
+                            // Verificar si el número ingresado es correcto
+                            if (numeroUsuario < numeroSecreto) {
+                                System.out.println("Demasiado bajo. Inténtalo de nuevo.");
+                            } else if (numeroUsuario > numeroSecreto) {
+                                System.out.println("Demasiado alto. Inténtalo de nuevo.");
+                            } else {
+                                System.out.println("¡Felicidades! Has adivinado el número.");
+                                adivinado = true; // Salir del bucle
+                            }
+                        } while (!adivinado); // Continuar hasta que el número sea adivinado
+
+                        //Se cierra el Scanner después de que se termina el bucle
+                        scanner.close();
+
+                        System.out.println("Presiona Enter para continuar...");
+                        scannerMenuPrincipal.nextLine(); // Captura el salto de línea restante
+                        scannerMenuPrincipal.nextLine(); // Espera a que el usuario presione Enter
+                        break;
+                    }
+
 
                 case 9:
                     System.out.println("Imprime el menu Bucle WHILE");
@@ -547,13 +650,13 @@ public class Menu {
                     System.out.println("Imprime el menu Bucle FOR");
                     break;
 
-               }
 
+            }
 
-        }while (opciones != 0);
+        }while (opciones != 0) ;
         System.out.println("Saliendo del sistema...");
-
     }
+
 }
 
 
