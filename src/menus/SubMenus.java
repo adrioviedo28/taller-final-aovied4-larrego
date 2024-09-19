@@ -86,6 +86,60 @@ public class SubMenus {
         System.out.println("Escribe 1 para mostrarte un ejemplo que aplica los condicionales IF, ELSE IF y ELSE");
 
     }
+    public static void switchSubMenu(){
+        System.out.println("-----------------------------------------------------");
+        System.out.println("                       SWITCH                        ");
+        System.out.println("-----------------------------------------------------");
+        System.out.println("|      Elige la opcion que deseas ver               |");
+        System.out.println("|      1. Explicación de Switch                     |");
+        System.out.println("|      2.Programa de Switch -valide su calificación |");
+        System.out.println("-----------------------------------------------------");
+
+        System.out.println("Selecciona una opcion");
+    }
+    public static void ternariaSubMenu(){
+        System.out.println("-----------------------------------------------------");
+        System.out.println("                       TERNARIA                      ");
+        System.out.println("-----------------------------------------------------");
+        System.out.println("|     Elige la opcion que deseas ver                |");
+        System.out.println("|     1. Explicación de Ternaria                    |");
+        System.out.println("|     2.Programa de Ternaria -Determina si un número|");
+        System.out.println("|     es Par o Impar -Digite una opción             |");
+        System.out.println("-----------------------------------------------------");
+    }
+    public static void doWhileSubMenu(){
+        System.out.println("-----------------------------------------------------");
+        System.out.println("                     Bucle DO WHILE                  ");
+        System.out.println("-----------------------------------------------------");
+        System.out.println("|     Elige la opcion que deseas ver                |");
+        System.out.println("|     1.Explicación DO WHILE                        |");
+        System.out.println("|     2.Programa de Do WHILE -Adivina el numero     |");
+        System.out.println("|                Digite una opción                  |");
+        System.out.println("-----------------------------------------------------");
+    }
+    public static void whileSubMenu(){
+        System.out.println("-----------------------------------------------------");
+        System.out.println("                     Bucle WHILE                     ");
+        System.out.println("-----------------------------------------------------");
+        System.out.println("|     Elige la opcion que deseas ver                |");
+        System.out.println("|     1.Explicación  WHILE                          |");
+        System.out.println("|     2.Programa de  WHILE                          |");
+        System.out.println("|                Digite una opción                  |");
+        System.out.println("-----------------------------------------------------");
+    }
+    public static void forSubMenu(){
+        System.out.println("-----------------------------------------------------");
+        System.out.println("                     Bucle FOR                       ");
+        System.out.println("-----------------------------------------------------");
+        System.out.println("|     Elige la opcion que deseas ver                |");
+        System.out.println("|     1.Explicación  FOR                            |");
+        System.out.println("|     2.Programa de  FOR                            |");
+        System.out.println("|                Digite una opción                  |");
+        System.out.println("-----------------------------------------------------");
+    }
+
+
+
 
 
 
