@@ -7,10 +7,6 @@ import menus.SubMenus;
 //import utilidades.Validaciones;
 
 import programas.Ejemplos;
-
-
-
-
 import java.util.Random;
 import java.util.Scanner;
 public class Menu {
